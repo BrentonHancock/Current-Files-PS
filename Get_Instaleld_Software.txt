@@ -1,0 +1,2 @@
+Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, Publisher, InstallDate | Sort-Object DisplayName | Export-Csv C:\Users\$env:UserName\Desktop\PC_Programs.csv
+Write-Host "A list of all software installed on $env:ComputerName has been created and is now listed on the desktop under the file name 'PC_Programs'"
